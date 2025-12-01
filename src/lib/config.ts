@@ -3,8 +3,8 @@ export const studioConfig = {
   name: "Studio Belén",
   tagline: "Nails & Beauty",
   phone: "5493880000000",
-  location: "San Salvador de Jujuy, Argentina",
-  address: "Av. Belgrano 1234, San Salvador de Jujuy",
+  location: "Villa constitucion, Argentina",
+  address: "Av. Belgrano 1234, Villa constitucion",
   hours: "Lunes a Sábado · 9:00 a 20:00",
   instagram: "@studiobelen.nails",
 };
