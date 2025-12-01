@@ -38,7 +38,7 @@ export async function iniciarPago(
   // Simulamos éxito
   onProgress(
     "success",
-    "Pago aprobado (simulado). En un proyecto real, acá se mostraría el estado de Mercado Pago y se guardaría la reserva en el backend."
+    "Pago aprobado (simulado). con las configuraciones de Mercado Pago, acá se mostraría el estado del pago y se guardaría la reserva en el backend."
   );
 
   /*
