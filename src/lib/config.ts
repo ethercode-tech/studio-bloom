@@ -2,11 +2,11 @@
 export const studioConfig = {
   name: "Chloe Nails Studio",
   tagline: "Uñas profesionales",
-  phone: "5493880000000",
+  phone: "5493400537833",
   location: "Villa constitucion, Argentina",
   address: "Av. Belgrano 1234, Villa constitucion",
   hours: "Lunes a Sábado · 9:00 a 20:00",
-  instagram: "@studiobelen.nails",
+  instagram: "@chloenailsestudio2",
 };
 
 export const services = [
