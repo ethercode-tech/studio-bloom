@@ -93,17 +93,24 @@ export function BookingWidget({ preselectedService }: BookingWidgetProps) {
   };
 
   const handleWhatsApp = () => {
+    const precio = calcularPrecioServicio(formData.servicio);
+
     const bookingData: BookingData = {
       nombre: formData.nombre,
       telefono: formData.telefono,
-      servicio: allServices.find((s) => s.id === formData.servicio)?.name || formData.servicio,
+      servicio:
+        allServices.find((s) => s.id === formData.servicio)?.name ||
+        formData.servicio,
       fecha: formData.fecha,
       hora: formData.hora,
       comentarios: formData.comentarios,
+      precio,
     };
+
     const link = generarLinkWhatsApp(bookingData);
     window.open(link, "_blank");
   };
+
 
   const handleMercadoPago = async () => {
     setShowPaymentModal(true);
