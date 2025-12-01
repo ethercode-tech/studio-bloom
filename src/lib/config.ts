@@ -4,7 +4,7 @@ export const studioConfig = {
   tagline: "Uñas profesionales",
   phone: "5493400537833",
   location: "Villa constitucion, Argentina",
-  address: "Av. Belgrano 1234, Villa constitucion",
+  address: "Guiraldes 2461, Villa constitución",
   hours: "Lunes a Sábado · 9:00 a 20:00",
   instagram: "@chloenailsestudio2",
 };
