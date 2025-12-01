@@ -83,7 +83,7 @@ export function Hero() {
             <div className="relative rounded-3xl overflow-hidden glass-card">
               <img
                 src={heroImage}
-                alt="Uñas profesionales en Studio Belén"
+                alt="Uñas profesionales en Chlow Nails Studio"
                 className="w-full aspect-[4/3] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />

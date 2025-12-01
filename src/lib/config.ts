@@ -1,7 +1,7 @@
 // Configuración del estudio - modificar para cada cliente
 export const studioConfig = {
-  name: "Studio Belén",
-  tagline: "Nails & Beauty",
+  name: "Chloe Nails Studio",
+  tagline: "Uñas profesionales",
   phone: "5493880000000",
   location: "Villa constitucion, Argentina",
   address: "Av. Belgrano 1234, Villa constitucion",
@@ -36,7 +36,7 @@ export const services = [
   },
   {
     id: "nail-art",
-    name: "Nail Art Avanzado",
+    name: "Esmaltado semipermanente en manos y pies",
     description: "Diseños personalizados con técnicas de decoración premium.",
     price: 15000,
     duration: "120 min",
@@ -92,12 +92,12 @@ export const testimonials = [
   {
     name: "Lucía",
     age: 29,
-    text: "Nunca tuve uñas tan lindas y duraderas. Belén es súper profesional y el ambiente del estudio es hermoso. Reservar por la web fue rapidísimo.",
+    text: "Nunca tuve uñas tan lindas y duraderas. Diamela es súper profesional y el ambiente del estudio es hermoso. Reservar por la web fue rapidísimo.",
   },
   {
     name: "Camila",
     age: 24,
-    text: "Me hizo las uñas para mi casamiento y quedaron perfectas. Aguantaron todo el viaje de luna de miel sin ningún desperfecto.",
+    text: "Diamela me hizo las uñas para mi casamiento y quedaron perfectas. Aguantaron todo el viaje de luna de miel sin ningún desperfecto.",
   },
   {
     name: "Valentina",
