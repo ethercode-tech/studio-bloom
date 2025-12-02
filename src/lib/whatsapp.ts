@@ -1,4 +1,4 @@
-import { studioConfig } from "./config";
+import { estudioConfig } from "./config";
 
 export interface BookingData {
   nombre: string;
@@ -29,7 +29,7 @@ export function generarMensajeWhatsApp(data: BookingData): string {
   const fechaLegible = formatearFecha(data.fecha);
 
   const lineas = [
-    `Hola, quiero reservar un turno en *${studioConfig.name}* 💅`,
+    `Hola, quiero reservar un turno en *${estudioConfig.name}* 💅`,
     ``,
     `*Nombre:* ${data.nombre}`,
     `*WhatsApp del cliente:* ${data.telefono}`,
@@ -50,12 +50,12 @@ export function generarLinkWhatsApp(data: BookingData): string {
   const mensajeEncoded = encodeURIComponent(mensaje);
 
   // Asegurate de tener en config:
-  // studioConfig.phone = "549388xxxxxxx"
-  return `https://wa.me/${studioConfig.phone}?text=${mensajeEncoded}`;
+  // estudioConfig.phone = "549388xxxxxxx"
+  return `https://wa.me/${estudioConfig.phone}?text=${mensajeEncoded}`;
 }
 
 export function generarLinkWhatsAppGeneral(): string {
-  const mensaje = `Hola, quiero consultar por turnos en *${studioConfig.name}*. 🌸`;
+  const mensaje = `Hola, quiero consultar por turnos en *${estudioConfig.name}*. 🌸`;
   const mensajeEncoded = encodeURIComponent(mensaje);
-  return `https://wa.me/${studioConfig.phone}?text=${mensajeEncoded}`;
+  return `https://wa.me/${estudioConfig.phone}?text=${mensajeEncoded}`;
 }

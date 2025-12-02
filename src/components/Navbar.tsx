@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { studioConfig } from "@/lib/config";
+import { estudioConfig } from "@/lib/config";
 
 const navLinks = [
   { href: "#servicios", label: "Servicios" },
@@ -38,9 +38,9 @@ export function Navbar() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="text-xl font-bold">
-          {studioConfig.name}{" "}
+          {estudioConfig.name}{" "}
           <span className="text-primary hidden sm:inline">
-            · {studioConfig.tagline}
+            · {estudioConfig.tagline}
           </span>
         </a>
 

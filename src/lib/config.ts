@@ -1,6 +1,6 @@
 // Configuración del estudio - modificar para cada cliente
-export const studioConfig = {
-  name: "Chloe Nails Studio",
+export const estudioConfig = {
+  name: "Chloe Nails Estudio",
   tagline: "Uñas profesionales",
   phone: "5493400537833",
   location: "Villa constitucion, Argentina",

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, Calendar, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { generarLinkWhatsAppGeneral } from "@/lib/whatsapp";
-import { studioConfig } from "@/lib/config";
+import { estudioConfig } from "@/lib/config";
 import heroImage from "@/assets/hero-nails.jpg";
 
 export function Hero() {
@@ -42,7 +42,7 @@ export function Hero() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
                 Uñas perfectas,{" "}
                 <span className="gradient-text">estudio profesional</span> en{" "}
-                {studioConfig.location.split(",")[0]}
+                {estudioConfig.location.split(",")[0]}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
                 Manicura, soft gel y kapping para clientas que no quieren
@@ -83,7 +83,7 @@ export function Hero() {
             <div className="relative rounded-3xl overflow-hidden glass-card">
               <img
                 src={heroImage}
-                alt="Uñas profesionales en Chlow Nails Studio"
+                alt="Uñas profesionales en Chloe Nails Estudio"
                 className="w-full aspect-[4/3] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />

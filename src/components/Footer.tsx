@@ -1,5 +1,5 @@
 import { MessageCircle, MapPin, Clock, Instagram } from "lucide-react";
-import { studioConfig } from "@/lib/config";
+import { estudioConfig } from "@/lib/config";
 import { generarLinkWhatsAppGeneral } from "@/lib/whatsapp";
 
 export function Footer() {
@@ -9,8 +9,8 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2 space-y-4">
             <h3 className="text-2xl font-bold">
-              {studioConfig.name}{" "}
-              <span className="text-primary">· {studioConfig.tagline}</span>
+              {estudioConfig.name}{" "}
+              <span className="text-primary">· {estudioConfig.tagline}</span>
             </h3>
             <p className="text-muted-foreground max-w-md">
               Si tenés un evento, no esperes al último día. Reservá tu turno con
@@ -34,13 +34,13 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`https://instagram.com/${studioConfig.instagram.replace("@", "")}`}
+                  href={`https://instagram.com/${estudioConfig.instagram.replace("@", "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
-                  {studioConfig.instagram}
+                  {estudioConfig.instagram}
                 </a>
               </li>
             </ul>
@@ -51,11 +51,11 @@ export function Footer() {
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 shrink-0" />
-                <span>{studioConfig.address}</span>
+                <span>{estudioConfig.address}</span>
               </li>
               <li className="flex items-start gap-2">
                 <Clock className="w-4 h-4 mt-1 shrink-0" />
-                <span>{studioConfig.hours}</span>
+                <span>{estudioConfig.hours}</span>
               </li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} {studioConfig.name}. Todos los derechos
+            © {new Date().getFullYear()} {estudioConfig.name}. Todos los derechos
             reservados.
           </p>
           <div className="flex gap-6">
