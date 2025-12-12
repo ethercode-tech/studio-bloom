@@ -1,3 +1,4 @@
+import type { Package } from "@/lib/config";
 import { estudioConfig } from "./config";
 
 export interface BookingData {
@@ -45,7 +46,7 @@ export function generarMensajeWhatsApp(data: BookingData): string {
   return lineas.join("\n");
 }
 
-export function generarLinkWhatsApp(data: BookingData): string {
+export function generarLinkWhatsApp(data: any): string {
   const mensaje = generarMensajeWhatsApp(data);
   const mensajeEncoded = encodeURIComponent(mensaje);
 
@@ -58,4 +59,24 @@ export function generarLinkWhatsAppGeneral(): string {
   const mensaje = `Hola, quiero consultar por turnos en *${estudioConfig.name}*. 🌸`;
   const mensajeEncoded = encodeURIComponent(mensaje);
   return `https://wa.me/${estudioConfig.phone}?text=${mensajeEncoded}`;
+}
+
+export function generarMensajePaquete(pkg: Package) {
+  const precio = pkg.price.toLocaleString("es-AR");
+  const duracion = `${pkg.durationMin} min`;
+
+  return [
+    `Hola! Quiero reservar el paquete: *${pkg.name}* ✨`,
+    `Precio: $${precio}`,
+    `Duración: ${duracion}`,
+    pkg.includes?.length ? `Incluye: ${pkg.includes.join(", ")}` : null,
+    `¿Qué turnos tenés disponibles?`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+export function generarLinkWhatsAppPaquete(pkg: Package) {
+  const msg = encodeURIComponent(generarMensajePaquete(pkg));
+  return `https://wa.me/${estudioConfig.phone}?text=${msg}`;
 }

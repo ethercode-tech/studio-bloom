@@ -370,7 +370,7 @@ export function BookingWidget({ preselectedService }: BookingWidgetProps) {
                       </span>
                     </Button>
 
-                    <Button
+                    {/* <Button
                       onClick={handleMercadoPago}
                       size="lg"
                       className="h-auto py-6 flex-col gap-2"
@@ -380,7 +380,7 @@ export function BookingWidget({ preselectedService }: BookingWidgetProps) {
                       <span className="text-xs text-primary-foreground/70">
                         Reserva garantizada
                       </span>
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </motion.div>

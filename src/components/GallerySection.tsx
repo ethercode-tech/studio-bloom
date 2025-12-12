@@ -1,18 +1,32 @@
 import { motion } from "framer-motion";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import gallery1 from "@/assets/gallery-1.jpeg";
+import gallery2 from "@/assets/gallery-2.jpeg";
+import gallery3 from "@/assets/gallery-3.jpeg";
+import gallery4 from "@/assets/gallery-4.jpeg";
+import gallery5 from "@/assets/gallery-5.jpeg";
+import gallery6 from "@/assets/gallery-6.jpeg";
+import gallery7 from "@/assets/gallery-7.jpeg";
+import gallery8 from "@/assets/gallery-8.jpeg";
+import gallery9 from "@/assets/gallery-9.jpeg";
+import gallery10 from "@/assets/gallery-10.jpeg";
+import gallery11 from "@/assets/gallery-11.jpeg";
+import gallery12 from "@/assets/gallery-12.jpeg";
+import gallery13 from "@/assets/gallery-13.jpeg";
 
 const galleryImages = [
-  { src: gallery1, label: "Antes / Después" },
-  { src: gallery2, label: "Diseño geométrico" },
+  { src: gallery1, label: "Antes y después · Soft Gel" },
+  { src: gallery2, label: "Diseño geométrico minimal" },
   { src: gallery3, label: "Kapping natural" },
-  { src: gallery4, label: "French glitter" },
-  { src: gallery5, label: "Marble mint" },
-  { src: gallery6, label: "Ombré rosado" },
+  { src: gallery4, label: "Francesita con glitter" },
+  { src: gallery5, label: "Diseño marble en tonos pastel" },
+  { src: gallery6, label: "Esmaltado semipermanente liso" },
+  { src: gallery7, label: "Ombré rosado suave" },
+  { src: gallery8, label: "Ombré rosado intenso" },
+  { src: gallery9, label: "Diseño delicado en nude" },
+  { src: gallery10, label: "Soft gel con detalle artístico" },
+  { src: gallery11, label: "Diseño elegante para eventos" },
+  { src: gallery12, label: "Kapping con acabado natural" },
+  { src: gallery13, label: "Nail art moderno y femenino" },
 ];
 
 export function GallerySection() {
@@ -26,11 +40,10 @@ export function GallerySection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Antes y después
+            Descubrí nuestros trabajos
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Mirá las transformaciones de nuestras clientas y encontrá inspiración
-            para tu próximo diseño.
+            Diseños reales, clientas reales. Inspirate para tu próximo turno.
           </p>
         </motion.div>
 
@@ -38,21 +51,27 @@ export function GallerySection() {
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative rounded-2xl overflow-hidden aspect-square"
+              transition={{ delay: index * 0.05 }}
+              className="group relative rounded-2xl overflow-hidden aspect-square bg-muted"
             >
               <img
                 src={image.src}
                 alt={image.label}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-sm font-medium">{image.label}</span>
-              </div>
+
+              {/* overlay suave */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+
+              {/* label siempre visible */}
+              {/* <div className="absolute bottom-3 left-3 right-3">
+                <span className="inline-block text-xs md:text-sm font-medium px-3 py-1.5 rounded-full bg-card/80 backdrop-blur border border-border">
+                  {image.label}
+                </span>
+              </div> */}
             </motion.div>
           ))}
         </div>

@@ -25,7 +25,7 @@ export function Navbar() {
 
   const scrollToBooking = () => {
     setIsOpen(false);
-    document.getElementById("reservar")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

@@ -6,8 +6,8 @@ import { estudioConfig } from "@/lib/config";
 import heroImage from "@/assets/hero-nails.jpg";
 
 export function Hero() {
-  const scrollToBooking = () => {
-    document.getElementById("reservar")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToServicios = () => {
+    document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -53,13 +53,9 @@ export function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                onClick={scrollToBooking}
-                className="text-lg px-8 py-6 glow-rose"
-              >
+              <Button size="lg" onClick={scrollToServicios} className="text-lg px-8 py-6 glow-rose">
                 <Calendar className="w-5 h-5 mr-2" />
-                Reservar ahora
+                Ver servicios y reservar
               </Button>
               <Button
                 size="lg"

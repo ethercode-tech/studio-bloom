@@ -14,7 +14,7 @@ const Index = () => {
 
   const handleSelectPackage = (packageId: string) => {
     setSelectedPackage(packageId);
-    document.getElementById("reservar")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
